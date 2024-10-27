@@ -1,0 +1,12 @@
+<div class="flex align-items-center mb-4 justify-content-end">
+  <label for="email" class="label mr-2"
+    >Input the text and hit ENTER to trigger an event</label
+  >
+  <input (keydown.enter)="OnEnter()" class="form-control" />
+</div>
+<div class="flex align-items-center mb-4 justify-content-end">
+  <label for="email2" class="label mr-2"
+    >Input the text and Ctrl+z to trigger undo event</label
+  >
+  <input (keydown.control.z)="OnUndo()" class="form-control" />
+</div>

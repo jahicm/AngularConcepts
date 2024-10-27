@@ -1,0 +1,8 @@
+<div class="flex align-items-center mb-4 justify-content-end">
+    <span class="label text-danger">{{ emailError }}</span>
+  </div>
+<div class="flex align-items-center mb-4 justify-content-end">
+  <label for="email" class="label mr-2">Valid Email</label>
+  <input #email (keydown)="OnClick(email.value)" class="form-control" />
+</div>
+

@@ -1,0 +1,61 @@
+.add-product-btn {
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    z-index: 10;
+  
+    box-shadow: 0 0 10px 2.5px rgba(17, 103, 50, 0.2);
+  }
+
+  .dialog-content {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    padding: 1rem; /* Add some padding to the dialog content */
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .align-items-center {
+    align-items: center; /* Center-align items */
+  }
+  
+  .mb-3 {
+    margin-bottom: 1rem; /* Space below the element */
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem; /* Space below the element */
+  }
+  
+  .label {
+    font-weight: bold; /* Make label text bold */
+    width: 6rem; /* Fixed width for consistent label alignment */
+    text-align: right; /* Align label text to the right */
+    
+  }
+  .label2 {
+    font-weight: bold;
+    width: 20rem; /* Fixed width for consistent label alignment */
+    text-align: left; /* Align label text to the right */
+    visibility: visible;
+    color:forestgreen;
+  }
+  
+  .input-field {
+    flex: 1; /* Allow input to take available space */
+    margin-left: 1rem; /* Space between label and input */
+  }
+  
+  .p-text-secondary {
+    color: #6c757d; /* Light gray for secondary text */
+  }
+  
+  .justify-content-end {
+    justify-content: flex-end; /* Align items to the right */
+  }
+  
+  .p-button {
+    margin-left: 0.5rem; /* Space between buttons */
+  }
