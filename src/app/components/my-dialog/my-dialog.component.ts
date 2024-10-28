@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
@@ -11,7 +11,8 @@ import { interval } from 'rxjs';
   templateUrl: './my-dialog.component.html',
   styleUrl: './my-dialog.component.scss',
 })
-export class MyDialogComponent {
+export class MyDialogComponent implements OnInit,OnDestroy {
+
   @Output() notify = new EventEmitter();
   @Output() notify2 = new EventEmitter();
   subscription: any;
@@ -23,9 +24,11 @@ export class MyDialogComponent {
   ngOnInit() {
     const timer = interval(1000);
     this.subscription = timer.subscribe(() => {});
+    console.log('SampleComponent initiated and subscription initiated');
   }
   ngOnDestroy() {
     this.subscription.unsubscribe();
     console.log('SampleComponent destroyed and subscription cleaned up');
   }
+  
 }
