@@ -37,14 +37,13 @@ import { MyDialog8Component } from '../my-dialog8/my-dialog8.component';
   styleUrl: './concept.component.scss',
 })
 export class ConceptComponent {
-
   email: string | undefined;
   number: number = 4;
   names: Array<string> = ['Alice', 'Bob', 'Charlie'];
   email2: string | undefined;
   username2: string | undefined;
   showOutput: boolean = false;
-  
+
   getNotification2(event: string) {
     alert(event);
   }
@@ -58,5 +57,4 @@ export class ConceptComponent {
   print() {
     console.log('Number is :', this.number);
   }
-
 }
