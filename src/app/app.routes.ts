@@ -3,7 +3,7 @@ import { ConceptComponent } from './components/concept/concept.component';
 export const routes: Routes = [
 
     {
-        path: 'concepts',
+        path: '',
         component: ConceptComponent
       },
 ];
