@@ -1,0 +1,54 @@
+
+<div class="output-section" class="label2">
+    <p>Entered Username: {{ username2 }}</p>
+    <p>Entered Password: {{ email2 }}</p>
+  </div>
+  <p-button (onClick)="showDialog()" label="Show" />
+  <p-dialog
+    header="Edit Profile"
+    [modal]="true"
+    [(visible)]="visible"
+    [style]="{ width: '30rem' }"
+  >
+    <div class="dialog-content">
+      <span class="p-text-secondary mb-3">Update your information.</span>
+  
+      <!-- Username Input -->
+      <div class="flex align-items-center mb-3 justify-content-end">
+        <label for="username" class="label">Username</label>
+        <input
+          pInputText
+          id="username"
+          class="input-field"
+          [(ngModel)]="username"
+          autocomplete="off"
+        />
+      </div>
+  
+      <!-- Email Input -->
+      <div class="flex align-items-center mb-4 justify-content-end">
+        <label for="email" class="label">Email</label>
+        <input
+          pInputText
+          id="email"
+          class="input-field"
+          [(ngModel)]="email"
+          autocomplete="off"
+        />
+      </div>
+  
+      <!-- Action Buttons -->
+      <div class="flex justify-content-end">
+        <p-button
+          label="Cancel"
+          severity="secondary"
+          (click)="visible = false"
+        ></p-button>
+        <p-button
+          label="Save"
+          (click)="visible = false"
+          (onClick)="save()"
+        ></p-button>
+      </div>
+    </div>
+  </p-dialog>

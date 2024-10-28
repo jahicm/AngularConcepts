@@ -24,9 +24,8 @@ export class MyDialogComponent {
     const timer = interval(1000);
     this.subscription = timer.subscribe(() => {});
   }
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.subscription.unsubscribe();
     console.log('SampleComponent destroyed and subscription cleaned up');
-
   }
 }

@@ -3,13 +3,16 @@ import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
-import { RadioButtonModule } from 'primeng/radiobutton';
 import { CommonModule } from '@angular/common';
 import { HighligtsDirective } from '../../customdirectives/highligts.directive';
 import { MyDialogComponent } from '../my-dialog/my-dialog.component';
 import { MyDialog2Component } from '../my-dialog2/my-dialog2.component';
-import { MyDialog3Component } from "../my-dialog3/my-dialog3.component";
+import { MyDialog3Component } from '../my-dialog3/my-dialog3.component';
 import { MyDialog4Component } from '../my-dialog4/my-dialog4.component';
+import { MyDialog5Component } from '../my-dialog5/my-dialog5.component';
+import { MyDialog6Component } from '../my-dialog6/my-dialog6.component';
+import { MyDialog7Component } from '../my-dialog7/my-dialog7.component';
+import { MyDialog8Component } from '../my-dialog8/my-dialog8.component';
 
 @Component({
   selector: 'app-home',
@@ -19,83 +22,41 @@ import { MyDialog4Component } from '../my-dialog4/my-dialog4.component';
     DialogModule,
     InputTextModule,
     FormsModule,
-    RadioButtonModule,
     CommonModule,
     HighligtsDirective,
     MyDialogComponent,
     MyDialog2Component,
     MyDialog3Component,
-    MyDialog4Component
-],
+    MyDialog4Component,
+    MyDialog5Component,
+    MyDialog6Component,
+    MyDialog7Component,
+    MyDialog8Component,
+  ],
   templateUrl: './concept.component.html',
-  styleUrl: './concept.component.scss'
+  styleUrl: './concept.component.scss',
 })
 export class ConceptComponent {
 
-  visible: boolean = false;
   email: string | undefined;
-  username: string | undefined;
+  number: number = 4;
+  names: Array<string> = ['Alice', 'Bob', 'Charlie'];
   email2: string | undefined;
   username2: string | undefined;
   showOutput: boolean = false;
-  number: number=4;
-  names: Array<string> = ['Alice', 'Bob', 'Charlie'];
-  ingredient: string="";
-  color: string | undefined;;
-  fontSize: string | undefined;
-
-  getNotification2(event: string)
-  {
+  
+  getNotification2(event: string) {
     alert(event);
   }
 
-  getNotification(event: string)
-  {
+  getNotification(event: string) {
     alert(event);
   }
+  showChange() {
+    console.log('Number is :', this.number);
+  }
+  print() {
+    console.log('Number is :', this.number);
+  }
 
-  changeStyle(style: string)
-  {
-    switch (style.toLowerCase()) {
-      case 'red':
-        this.color = 'red';
-        this.fontSize="3rem";
-        break;
-      case 'green':
-        this.color = 'green';
-        this.fontSize="4rem";
-        break;
-      case 'blue':
-        this.color = 'blue';
-        this.fontSize="5rem";
-        break;
-      default:
-        this.color = 'gray'; // Default color if no match
-        this.fontSize="3rem";
-    }
-  }
-  showChange()
-  {
-    console.log("Number is :",this.number);
-  }
-  print()
-  {
-    console.log("Number is :",this.number);
-  }
-  showDialog()
-  {
-    this.visible = true;
-    
-
-  }
-  save()
-  {
-    console.log("Username :",this.username);
-    console.log("Email :",this.email);
-    this.showOutput=true;
-    this.email2 = this.email;
-    this.username2 = this.username;
-    this.username="";
-    this.email="";
-  }
 }

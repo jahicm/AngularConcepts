@@ -1,0 +1,18 @@
+<div style="display: flex; gap: 10px">
+  <p-button
+    (onClick)="changeStyle('red')"
+    label="Red 3rem"
+    [style]="{ 'background-color': 'red' }"
+  />
+  <p-button
+    (onClick)="changeStyle('green')"
+    label="Green 5rem"
+    [style]="{ 'background-color': 'green' }"
+  />
+  <p-button
+    (onClick)="changeStyle('blue')"
+    label="Blue 7rem"
+    [style]="{ 'background-color': 'blue' }"
+  />
+  <div [ngStyle]="{ color: color, 'font-size': fontSize }">TEST</div>
+</div>

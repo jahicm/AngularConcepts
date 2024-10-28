@@ -1,0 +1,13 @@
+<div>
+  <label>Interest Rate (%):</label>
+  <input type=number [ngModel]="interestRate()" (ngModelChange)="updateInterestRate($event)"  (blur)="logInterestRate()" />
+
+  <p>Currency Values Affected by Interest Rate:</p>
+  <ul>
+    <li>USD: {{ usd() | currency : "USD" }}</li>
+    <li>EUR: {{ eur() | currency : "EUR" }}</li>
+    <li>GBP: {{ gbp() | currency : "GBP" }}</li>
+    <li>CHF: {{ chf() | currency : "CHF" }}</li>
+    <li>CNY: {{ cny() | currency : "CNY" }}</li>
+  </ul>
+</div>
