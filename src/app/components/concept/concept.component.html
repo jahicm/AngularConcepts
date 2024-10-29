@@ -29,10 +29,11 @@
   Concept of using conditional Angular display,if showOutput=true (clicking Show
   button) (Angular directive if)
 </h3>
-@if(showOutput){
+<p-button (onClick)="showDialog()" label="Show" />
+
+@if(visible){
 <div class="output-section">
-  <p>Entered Username: {{ username2 }}</p>
-  <p>Entered Password: {{ email2 }}</p>
+  <p>If Visible</p>
 </div>
 }
 <h3>Concept of using for loop in Angular (Angular directive ngFor)</h3>
@@ -55,7 +56,7 @@
 </div>
 <h3>
   Concept of using Angular Emmiter and sending an event from child to parent
-  (base case)
+  (base case) + using Angular Lifecycle Hooks (ngOnInit,ngOnDestroy)
 </h3>
 <div>
   <app-my-dialog (notify)="getNotification($event)"></app-my-dialog>

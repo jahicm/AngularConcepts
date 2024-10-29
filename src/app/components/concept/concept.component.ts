@@ -40,9 +40,7 @@ export class ConceptComponent {
   email: string | undefined;
   number: number = 4;
   names: Array<string> = ['Alice', 'Bob', 'Charlie'];
-  email2: string | undefined;
-  username2: string | undefined;
-  showOutput: boolean = false;
+  visible: boolean = false;
 
   getNotification2(event: string) {
     alert(event);
@@ -54,7 +52,7 @@ export class ConceptComponent {
   showChange() {
     console.log('Number is :', this.number);
   }
-  print() {
-    console.log('Number is :', this.number);
+  showDialog() {
+    this.visible = !this.visible;
   }
 }
