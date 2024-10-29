@@ -13,6 +13,7 @@ import { MyDialog5Component } from '../my-dialog5/my-dialog5.component';
 import { MyDialog6Component } from '../my-dialog6/my-dialog6.component';
 import { MyDialog7Component } from '../my-dialog7/my-dialog7.component';
 import { MyDialog8Component } from '../my-dialog8/my-dialog8.component';
+import { MyDialog9Component } from "../my-dialog9/my-dialog9.component";
 
 @Component({
   selector: 'app-home',
@@ -32,7 +33,8 @@ import { MyDialog8Component } from '../my-dialog8/my-dialog8.component';
     MyDialog6Component,
     MyDialog7Component,
     MyDialog8Component,
-  ],
+    MyDialog9Component
+],
   templateUrl: './concept.component.html',
   styleUrl: './concept.component.scss',
 })

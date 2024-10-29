@@ -1,0 +1,38 @@
+<div>
+  <h5>Currency Pipe</h5>
+  <p-dropdown
+    [options]="currencies"
+    [(ngModel)]="selectedCurrency"
+    placeholder="Select a Currency"
+    onchange="recalculate()"
+  >
+  </p-dropdown>
+  <ul>
+    @switch(selectedCurrency) { @case ('USD') {
+    <li>{{ 10 | currency : "USD" }}</li>
+    } @case ('CNY') {
+    <li>{{ 10 | currency : "CNY" }}</li>
+    } @case('JPY') {
+    <li>{{ 10 | currency : "JPY" }}</li>
+    } @case('GBP') {
+    <li>{{ 10 | currency : "GBP" }}</li>
+    } @case('RUB') {
+    <li>{{ 10 | currency : "RUB" }}</li>
+    } }
+  </ul>
+</div>
+<div>
+  <h5>Date Pipe</h5>
+  <p>Date format before pipe :{{ today }}</p>
+  <p>Date format after pipe :{{ today | date }}</p>
+</div>
+<div>
+  <h5>Uppercase Pipe(typing lower case pipe to upper case)</h5>
+  <input #val (keydown)="toUpperCase(val.value)" class="form-control" />
+  <p>Upper case format after pipe applied :{{ value | uppercase }}</p>
+</div>
+<div>
+  <h5>Lowercase Custom Pipe(typing upper case pipe to lower case)</h5>
+  <input #val2 (keydown)="toLowerCase(val2.value)" class="form-control" />
+  <p>Lower case format after pipe applied :{{ value2 || ""| tolowercasepipe }}</p>
+</div>

@@ -29,7 +29,7 @@ export class MyDialog5Component {
       console.log(`Updated CHF value: ${this.chf()}`);
       console.log(`Updated CNY value: ${this.cny()}`);
     });
-    untracked;
+ 
   }
 
   // Method to calculate currency effect based on interest rate
